@@ -1,6 +1,9 @@
-![image](https://github.com/takry/Split_pdf/assets/63951434/9eb57be4-66e9-49b7-b47c-69af214d0eb8)# Split_pdf
+Split_pdf
 Python + 1c
 Разделитель пдф файлов по штрихкодам на python + обработка для 1с.
+
+Делит .pdf на отдельные файлы, по первому искомому штрихкоду на странице.
+
 
 Инструкция по установке/настройке для windows:
 
@@ -17,5 +20,7 @@ Python + 1c
 
 Инструкция по использованию:
 
-![image](https://github.com/takry/Split_pdf/assets/63951434/60da542b-ce62-4de7-8861-6e4bc7bd439d)
+![base](https://github.com/takry/Split_pdf/assets/63951434/1d07aadd-7614-416b-bad9-8014e4aaf57a)
 
+Каталог документа - путь до pdf, который надо разделить (вплоть до самого pdf!)
+Заполнить - используя python script разделт документ на несколько (по количеству шрихкодов) файлов в том же каталоге.
