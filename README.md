@@ -10,8 +10,11 @@ Python + 1c
 1) Устанавливаем себе python - https://www.python.org/downloads/windows/
 2) Чаще всего, путь установки выглядит так - C:\Users\[ИМЯ ПОЛЬЗОВАТЕЛЯ]\AppData\Local\Programs\Python\Python312\python.exe
 3) Устанавливаем нужные пакеты из файла requirements.txt:
+
   3.1) Пуск -> выполнить -> cmd -> python -m pip install -r requirements.txt
+
   3.2) requirements.txt из пунка 3.1 это путь к файлу requirements.txt, скачанному из этого репозитория
+
 4) Открываем РазделитьСканПоШтрихКодам.epf с помощью конфигуратора 1с
 5) В модуле Формы, в процедуре Заполнить имеется строка: ЗапуститьПриложение(СтрШаблон("C:\Users\F0621069\AppData\Local\Programs\Python\Python312\python.exe C:\ProjectPDF\2.py -f %1", " " + КаталогВыгрузкиДок), , Истина);
 Где: 
