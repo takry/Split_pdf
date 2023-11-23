@@ -3,6 +3,8 @@ import fitz
 from PyPDF2 import PdfReader, PdfWriter
 import argparse
 import os
+import time
+
 
 """ lllllllllllllllllllllllllllllllllllllililllllll]lllllllllllllllllllll 4
 l il!lш llш |lпl ll!l i ll lll Illl| illll lшll lllll llll l ll lll lllll ll|l llll\n 1
@@ -23,6 +25,8 @@ delimiter = ','
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-f')
 args = parser.parse_args()
+
+
 
 pdf_document = args.f
 
@@ -49,12 +53,16 @@ def start(pdf_document):
             pages_.append(page)
 
     pages_.append(doc.page_count)
-    for i in range(len(pages_)-1):
-        pdf_writer = PdfWriter()
-        for page in range(pages_[i], pages_[i+1]):
 
+    pages_set = list(set(pages_))
+
+    for i in range(len(pages_set)-1):
+        print(i)
+        pdf_writer = PdfWriter()
+        for page in range(pages_set[i], pages_set[i+1]):
+            sec = time.time()
             pdf_writer.add_page(pdf.pages[page])
-        outputFilename = f"{dir}\example-page-{page+1}.pdf"
+        outputFilename = f"{dir}\example-page-{sec}.pdf"
         with open(outputFilename, "wb") as out:
             pdf_writer.write(out)
             print("created", outputFilename)
